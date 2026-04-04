@@ -32,4 +32,10 @@ public void afisare() {
 public Integer getSuma() {
 	return suma;
 }
+public TipCaz getCaz() {
+	return tipCaz;
+}
+public TipCerere getCerere() {
+	return tipCerere;
+}
 }
