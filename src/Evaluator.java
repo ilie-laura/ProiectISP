@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Evaluator {
 private String parola;
 private String username;
 private Integer nrCereri=0;
+
+private List<Cerere> cereri=new ArrayList<>();
 
 
 public Evaluator(String p,String u) {
@@ -14,6 +18,11 @@ public void afisare() {
 	System.out.println("Detalii Evaluator");
 	System.out.println("Username:"+username);
 	System.out.println("Nr. Cereri:"+nrCereri);
+	for(int i=0;i<cereri.size();i++) {
+		System.out.println("Cererea "+i);
+		cereri.get(i).afisare();
+		
+	}
 	
 }
 public TipCerere evaluareCerere(Cerere c) {

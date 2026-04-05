@@ -5,6 +5,8 @@ private TipCaz tipCaz;
 private Integer IDCerere;
 private String Nume;
 
+private Cerere cerere;
+
 public Beneficiar(String n,String ib,Integer id,TipCaz tc) {
     super();
 	this.IBAN=ib;
@@ -19,6 +21,9 @@ System.out.println("Nume : "+Nume);
 System.out.println("IBAN: "+IBAN);
 System.out.println("Tip caz:"+tipCaz.getDesc());
 System.out.println("ID cerere: "+IDCerere);
+
+System.out.println("Cerere ");
+cerere.afisare();
 
 }
 private void contestatie() {
