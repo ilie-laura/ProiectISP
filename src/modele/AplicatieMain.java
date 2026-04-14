@@ -1,3 +1,4 @@
+package modele;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,11 +33,9 @@ public static void main(String[] args) {
         ));
 
         Donator d1 = new Donator("Ionescu", "Mihai", "RO99BTRL00001111", 7000);
-
-
         d1.alegeCaz(listaCereri);
 
-        System.out.println("\n--- Raport Final ---");
+        System.out.println("\n Istoric ");
         d1.afisareCazuriSustinute();
 	
 }

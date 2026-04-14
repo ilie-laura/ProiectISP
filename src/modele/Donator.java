@@ -1,3 +1,4 @@
+package modele;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -26,7 +27,7 @@ public void afisare() {
 	System.out.println("Venit: "+venit);
 }
 public Donator IntroducereDate() {
-	try (Scanner sc = new Scanner(System.in)) {
+	    Scanner sc = new Scanner(System.in);
 		String n,p,i;
 		Integer v;
 		System.out.println("Introduceti noile date: \n");
@@ -40,8 +41,9 @@ public Donator IntroducereDate() {
 		v=sc.nextInt();
 		Donator d=new Donator(n,p,i,v);
 		return d;
-	}
-}public void alegeCaz(List<Cerere> cereri) {
+	
+}
+public void alegeCaz(List<Cerere> cereri) {
     Scanner sc = new Scanner(System.in);
     
     System.out.println("Selectati categoria:");
@@ -51,6 +53,10 @@ public Donator IntroducereDate() {
     }
     
     int optiuneCat = sc.nextInt();
+    while(optiuneCat > categorii.length || optiuneCat<0) {
+     System.out.println("Index gresit! Introduceti altu");
+      optiuneCat = sc.nextInt();
+    }
     TipCaz categorieSelectata = categorii[optiuneCat];
 
     List<Cerere> filtrate = new ArrayList<>();
@@ -83,11 +89,25 @@ public Donator IntroducereDate() {
         System.out.println("Donatie realizata!");
     }
 }
+
 public void afisareCazuriSustinute() {
-    System.out.println("Donatorul " + nume + " a susținut:");
+    System.out.println("Donatorul " + nume + " a sustinut:");
     for (Donatie d : donatii) {
    
-        System.out.println("- " + d.getCerere().getCaz() + " | Sumă: " + d.getSuma());
+        System.out.println("- " + d.getCerere().getCaz() + "  Suma: " + d.getSuma());
     }
+}
+public String getNume() {
+	return nume;
+}
+public String getPrenume() {
+	return prenume;
+}
+public String getIBAN() {
+	return IBAN;
+}
+
+public Integer getVenit() {
+	return venit;
 }
 }

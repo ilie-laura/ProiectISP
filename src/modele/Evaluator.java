@@ -1,3 +1,4 @@
+package modele;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ private String username;
 private Integer nrCereri=0;
 
 private List<Cerere> cereri=new ArrayList<>();
-
+//impl metode
 
 public Evaluator(String p,String u) {
 	this.parola=p;

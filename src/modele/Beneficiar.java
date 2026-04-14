@@ -1,3 +1,4 @@
+package modele;
 
 public class Beneficiar extends Donator{
 private String IBAN;
